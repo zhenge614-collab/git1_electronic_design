@@ -195,7 +195,6 @@ qsort(dat_CO, 5, sizeof(float), compare);          // 5 个值排序
 mid_CO = (dat_CO[1] + dat_CO[2] + dat_CO[3]) / 3.0; // 去掉最大/最小，取中间均值
 ```
 
-
 ### ESP8266 AT 指令接入 MQTT
 
 复位 → 关回显 → Station → 连热点 → MQTT 用户配置 → 连接 → 订阅，数据按 JSON 上报。
