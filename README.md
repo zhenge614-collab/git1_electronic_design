@@ -195,15 +195,6 @@ qsort(dat_CO, 5, sizeof(float), compare);          // 5 个值排序
 mid_CO = (dat_CO[1] + dat_CO[2] + dat_CO[3]) / 3.0; // 去掉最大/最小，取中间均值
 ```
 
-### 浓度解算
-
-原始值先换算电压（V = raw×3.3/4096），再减零点基准并按标定系数得到浓度。
-见 [`code/concentration_calc.c`](code/concentration_calc.c)。
-
-```c
-dat_send.combustible_gas =
-    ((dat_send_voltage.combustible_gas_v - mid_GAS) * 3.3f / 4096.0f) / 3.0f * 50.0f;
-```
 
 ### ESP8266 AT 指令接入 MQTT
 
